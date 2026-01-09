@@ -224,6 +224,178 @@ textarea:-webkit-autofill:focus {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2328a745' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
     background-size: 12px;
 }
+/* =========================================
+   GLOBAL MOBILE FIXES
+========================================= */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Prevent viewport height bugs on mobile */
+.hero-insane {
+    min-height: 100svh;
+    height: auto;
+}
+
+/* =========================================
+   HERO SECTION – MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .hero-insane {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.75);
+    }
+
+    .hero-display {
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+
+    .hero-display span {
+        display: inline;
+        margin-right: 6px;
+    }
+
+    .hero-display span::after {
+        content: " ";
+    }
+
+    .lead.fs-4 {
+        font-size: 1.05rem !important;
+    }
+}
+
+/* =========================================
+   NAVBAR – MOBILE
+========================================= */
+@media (max-width: 992px) {
+    .glass-nav {
+        padding: 10px 0;
+    }
+
+    .nav-logo {
+        height: 40px;
+    }
+
+    .navbar-collapse {
+        background: rgba(15, 17, 21, 0.95);
+        padding: 20px;
+        border-radius: 12px;
+    }
+}
+
+/* =========================================
+   PRODUCT SECTIONS – MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .product-feature {
+        min-height: auto;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .img-full {
+        height: 240px;
+    }
+
+    .product-feature h2 {
+        font-size: 2rem;
+    }
+
+    .product-feature p {
+        font-size: 1rem;
+    }
+}
+
+/* =========================================
+   ABOUT SECTION – MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .about-glass-card {
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .about-watermark {
+        display: none;
+    }
+
+    .experience-badge {
+        position: static;
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
+/* =========================================
+   CERTIFICATIONS – MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .cert-luxury-section {
+        padding: 60px 20px;
+    }
+
+    .cert-badge {
+        padding: 25px 15px;
+    }
+
+    .cert-badge img {
+        height: 50px;
+    }
+
+    .cert-luxury-section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* =========================================
+   INQUIRY FORM – MOBILE
+========================================= */
+@media (max-width: 768px) {
+
+    .luxury-inquiry-card {
+        border-radius: 20px;
+    }
+
+    .inquiry-info-panel {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .form-floating label {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   WHATSAPP BUTTON – MOBILE
+========================================= */
+@media (max-width: 576px) {
+
+    .whatsapp-sticky {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+
+    .pulse {
+        display: none;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -285,7 +457,9 @@ textarea:-webkit-autofill:focus {
                     <h6 class="text-success fw-bold tracking-widest">OUR LEGACY</h6>
                     <h2 class="display-4 fw-bold mb-4 text-white">India's Agricultural <span class="text-success">Gold</span></h2>
                     <p class="lead text-white-50">Freshroots Impex is a premier international trading house specializing in the large-scale export of India's finest dehydrated produce.</p>
-                    <p class="text-white-50">We bridge the gap between Indian farms and global markets, exporting premium dehydrated Onion, Garlic, and Turmeric. Our advanced technology locks in natural flavor.</p>
+                    <p class="text-white-50">We bridge the gap between Indian growers and global markets by supplying premium dehydrated Onion, Garlic, and Turmeric to food processors, wholesalers, and bulk buyers worldwide. Using advanced dehydration and processing technology, we lock in natural flavor, aroma, and nutritional value while ensuring extended shelf life, food safety, and uniform quality across shipments.
+
+With a strong focus on export compliance, hygiene, and reliability, Freshroots Impex delivers products that meet international specifications and perform consistently in demanding global supply chains.</p>
                 </div>
                 <div class="col-lg-6 text-center" data-aos="zoom-in">
                     <img src="hero section bg.png" class="img-fluid rounded-4 shadow-glow" alt="About">
