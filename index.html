@@ -3,321 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshroots Impex | Global Trading Giant</title>
+    <title>Freshroots Impex | Premium Dehydrated Exports</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
-        :root { --primary: #198754; --dark: #0a0a0a; }
-        body { font-family: 'Poppins', sans-serif; overflow-x: hidden; background: #fff; }
-
-      /* Custom Typography */
-.fw-900 { font-weight: 900; }
-.tracking-widest { letter-spacing: 4px; }
-
-/* Navbar Glassmorphism */
-@media (max-width: 992px) {
-  .glass-nav {
-    padding: 10px;
-    text-align: center;
-  }
-  .nav-logo {
-    height: 40px;
-  }
-}
-
-.glass-nav {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px 0;
-}
-
-.nav-logo { height: 55px; width: auto; }
-
-/* Hero Section Styling */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem; /* smaller headline */
-    line-height: 1.1;
-    text-align: center;
-  }
-  .hero-content-wrapper {
-    padding: 0 20px;
-    text-align: center;
-  }
-  .hero-overlay-gradient {
-    background: rgba(0,0,0,0.7); /* stronger overlay for readability */
-  }
-}
-
-.hero-insane {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.1); /* Zoom effect */
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, transparent 80%);
-}
-
-.hero-display {
-    font-size: clamp(3rem, 10vw, 7rem);
-    line-height: 0.9;
-    font-weight: 900;
-}
-
-.text-outline {
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.5);
-}
-
-.shadow-glow {
-    box-shadow: 0 0 20px rgba(25, 135, 84, 0.4);
-    transition: 0.3s ease;
-}
-
-.shadow-glow:hover {
-    box-shadow: 0 0 35px rgba(25, 135, 84, 0.7);
-    transform: translateY(-3px);
-}
-
-/* Floating WhatsApp Button */
-.whatsapp-float {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    background: #25d366;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 700;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    z-index: 100;
-}
-        /* Hero Section */
-        .hero-insane { height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; background: #000; }
-        .hero-bg-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-        .hero-video-placeholder { 
-            width: 100%; height: 100%; 
-            background: url('hero section bg.png') center/cover; 
-            filter: brightness(0.4); animation: zoomEffect 20s infinite alternate; 
+        :root {
+            --primary-success: #28a745;
+            --dark-bg: #0f1115;
+            --glass-white: rgba(255, 255, 255, 0.1);
         }
-        @keyframes zoomEffect { from { transform: scale(1); } to { transform: scale(1.15); } }
-        .hero-overlay-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(0,0,0,0.9) 20%, transparent 100%); }
-        .hero-content-wrapper { position: relative; z-index: 2; color: white; }
-        .hero-title { font-family: 'Syncopate', sans-serif; font-size: clamp(3rem, 8vw, 6rem); line-height: 0.9; letter-spacing: -2px; }
-        .text-outline { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.6); }
 
-        /* Scroll Mouse */
-        .scroll-down-wrap { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 3; text-align: center; color: #fff; font-size: 10px; letter-spacing: 2px; }
-        .mouse { width: 25px; height: 40px; border: 2px solid #fff; border-radius: 20px; margin: 0 auto 10px; position: relative; }
-        .scroller { width: 3px; height: 8px; background: var(--primary); border-radius: 2px; position: absolute; top: 5px; left: 50%; transform: translateX(-50%); animation: scrollMove 2s infinite; }
-        @keyframes scrollMove { 0% { top: 5px; opacity: 1; } 100% { top: 25px; opacity: 0; } }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            overflow-x: hidden;
+        }
 
-        /* Product Features */
-        @media (max-width: 768px) {
-  .product-feature {
-    flex-direction: column;
-    text-align: center;
-    min-height: auto;
-    padding: 40px 0;
-  }
-  .img-full {
-    height: 250px; /* reduce image height */
-  }
+        /* Navbar Styling */
+        .glass-nav {
+            background: rgba(15, 17, 21, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-white);
+            padding: 15px 0;
+        }
+
+        .nav-logo { height: 50px; border-radius: 5px; }
+        .tracking-widest { letter-spacing: 0.2em; }
+        .fw-900 { font-weight: 900; }
+
+        /* Hero Section */
+        .hero-insane {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            transform: scale(1.1);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), transparent);
+            z-index: -1;
+        }
+
+        .hero-display {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .text-outline {
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+        }
+
+        /* Product Sections */
+        .img-full {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .product-feature {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Certifications */
+.cert-luxury-section { 
+    padding: 80px 0; 
+    background: #16181d; 
 }
 
-        .py-10 { padding: 100px 0; }
-        .product-feature { min-height: 80vh; display: flex; align-items: center; }
-        .img-full { width: 100%; height: 80vh; object-fit: cover; transition: 1s; }
-        .product-feature:hover .img-full { transform: scale(1.05); }
-        .about-premium {
-    background: #0a0a0a; /* Dark background to match the Hero */
-    overflow: hidden;
-    position: relative;
+/* The Container for the Logo */
+.cert-luxury-section {
+    padding: 100px 0;
+    /* Deep Midnight Navy */
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    border-top: 2px solid #b8860b; /* Dark Goldenrod accent */
+    border-bottom: 2px solid #b8860b;
 }
 
-.about-watermark {
-    position: absolute;
-    top: 50%;
-    right: -10%;
-    height: 120%;
-    opacity: 0.03;
-    filter: grayscale(1);
-    transform: translateY(-50%);
-    pointer-events: none;
+.cert-luxury-section h2 {
+    color: #f1f5f9;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
 }
-
-.about-glass-card {
-    background: rgba(255, 255, 255, 0.03);
+.cert-badge {
+    background: rgba(255, 255, 255, 0.95); /* Nearly solid white for logo visibility */
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(25, 135, 84, 0.2);
-    padding: 50px;
-    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    border-radius: 4px; /* Sharp corners look more "corporate" and "premium" than round ones */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.experience-badge {
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-    background: #198754;
-    color: white;
-    padding: 20px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(25, 135, 84, 0.4);
+.cert-badge:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
 }
 
-.experience-badge .num { font-size: 2rem; font-weight: 900; display: block; }
 
-        /* Inquiry Section */
-        @media (max-width: 576px) {
-  .luxury-inquiry-card {
-    border-radius: 20px;
-    padding: 20px;
-  }
-  .inquiry-info-panel {
-    padding: 30px;
-    text-align: center;
-  }
-  .stylish-input {
-    font-size: 0.9rem;
-  }
-  .btn {
-    width: 100%; /* full-width button on mobile */
-  }
+/* Ensuring logos are sized correctly */
+.cert-badge img {
+    max-width: 100%;
+    height: 60px; /* Fixed height ensures alignment */
+    object-fit: contain; /* Prevents stretching */
+    filter: none; /* REMOVED grayscale for better visibility */
+    margin-bottom: 15px;
 }
 
-        .inquiry-global-bg { background: linear-gradient(135deg, #0f0f0f 0%, #1a3a2a 100%); padding: 100px 0; }
-        .luxury-inquiry-card { border-radius: 40px; overflow: hidden; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .inquiry-info-panel { background: linear-gradient(rgba(25, 135, 84, 0.8), rgba(10, 50, 30, 0.9)); }
-        .stylish-input { background: transparent !important; border: none !important; border-bottom: 2px solid rgba(255,255,255,0.2) !important; border-radius: 0 !important; color: white !important; padding: 15px 0 !important; }
-        .stylish-input:focus { border-bottom-color: var(--primary) !important; box-shadow: none !important; }
-        .form-floating label { color: rgba(255,255,255,0.5); left: 0; }
-        
-        /* WhatsApp */
-        @media (max-width: 576px) {
-  .whatsapp-sticky {
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 0.85rem;
-  }
+/* Badge styling */
+.cert-status { 
+    font-size: 0.65rem; 
+    font-weight: 700;
+    text-transform: uppercase; 
+    padding: 4px 12px; 
+    border-radius: 50px; 
+    letter-spacing: 0.5px;
+    display: inline-block;
 }
 
-        .whatsapp-sticky { position: fixed; bottom: 40px; right: 40px; background: #25d366; color: #fff; padding: 15px 30px; border-radius: 50px; z-index: 999; text-decoration: none; font-weight: 700; display: flex; align-items: center; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        .pulse { position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: 4px solid #25d366; border-radius: 50px; animation: pulse-ring 1.5s infinite; }
-        @keyframes pulse-ring { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+.verified { 
+    background: #198754; /* Bootstrap Success Green */
+    color: white; 
+}
+        /* Inquiry Form */
+        .stylish-input {
+            background: rgba(255,255,255,0.05) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            color: white !important;
+        }
 
-        /* AOS Custom */
-        [data-aos="clip-up"] { clip-path: inset(100% 0% 0% 0%); transition: 1.2s; }
-        [data-aos="clip-up"].aos-animate { clip-path: inset(0% 0% 0% 0%); }
+        /* WhatsApp Sticky */
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            z-index: 9999;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .pulse {
+            position: absolute;
+            width: 100%; height: 100%;
+            background: #25d366;
+            border-radius: 50px;
+            z-index: -1;
+            left: 0; top: 0;
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+
+        .shadow-glow { box-shadow: 0 0 20px rgba(40, 167, 69, 0.3); }
+        /* Fix for Floating Labels and Input Styling */
+/* Updated CSS for the Dropdown */
+/* 1. Force the dropdown menu (options) to stay dark */
+.stylish-input option {
+    background-color: #1a1c20 !important; /* Matches your card background */
+    color: #ffffff !important;
+}
+
+/* 2. Fix the floating label overlap and remove white backgrounds */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    background-color: transparent !important;
+    color: #28a745 !important; /* Success Green */
+    opacity: 1;
+}
+
+/* 3. Remove the default white/blue browser focus outline */
+.stylish-input:focus {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: #28a745 !important;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.2) !important;
+    outline: none !important;
+}
+
+/* 4. Kill the white/yellow background on browser Auto-fill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px #1a1c20 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 5. Clean up the Select arrow and appearance */
+.form-select.stylish-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%2328a745' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-size: 12px;
+}
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top glass-nav">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="logo.jpeg" alt="Freshroots Impex" class="nav-logo">
-            <div class="brand-text ms-2">
-                <span class="d-block fw-900 text-white">FRESHROOTS</span>
-                <span class="d-block fw-bold text-success tracking-widest small">IMPEX</span>
-            </div>
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#onion">Onion</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#garlic">Garlic</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#turmeric">Turmeric</a></li>
-                <li class="nav-item ms-lg-3">
-                    <a class="btn btn-success rounded-pill px-4 shadow-glow" href="#inquiry">GET A QUOTE</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<section id="home" class="hero-insane">
-    <div class="hero-bg" style="background-image: url('image_b8d2da.jpg');"></div>
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-        <div class="row">
-            <div class="col-lg-10">
-                <h6 class="text-success fw-bold tracking-widest mb-3" data-aos="fade-up">ESTABLISHED IN INDIA • SERVING THE GLOBE</h6>
-                <h1 class="hero-display">
-                    <span class="d-block text-white" data-aos="fade-up" data-aos-delay="100">ONION.</span>
-                    <span class="d-block text-outline" data-aos="fade-up" data-aos-delay="200">GARLIC.</span>
-                    <span class="d-block text-success" data-aos="fade-up" data-aos-delay="300">TURMERIC.</span>
-                </h1>
-                <p class="lead text-white-50 mt-4 fs-4 max-w-600" data-aos="fade-up" data-aos-delay="400">
-                    Premium Dehydrated Exports. <br> From Indian Soils to Global Markets.
-                </p>
-                <div class="mt-5" data-aos="fade-up" data-aos-delay="500">
-                    <a href="#inquiry" class="btn btn-success btn-lg rounded-pill px-5 py-3 shadow-glow">GET A QUOTE</a>
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.jpeg" alt="Logo" class="nav-logo">
+                <div class="brand-text ms-2">
+                    <span class="d-block fw-900 text-white">FRESHROOTS</span>
+                    <span class="d-block fw-bold text-success tracking-widest small">IMPEX</span>
                 </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#onion">Onion</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#garlic">Garlic</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#turmeric">Turmeric</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-success rounded-pill px-4 shadow-glow" href="#inquiry">GET A QUOTE</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-   
-</section>
-<section id="about" class="about-premium py-10">
-    <div class="container position-relative">
-        <img src="logo.jpeg" class="about-watermark" alt="">
+    </nav>
 
-        <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="about-glass-card">
-                    <h6 class="text-success fw-bold tracking-widest">OUR LEGACY</h6>
-                    <h2 class="display-4 fw-bold mb-4 text-white">India's Agricultural <span class="text-success">Gold</span></h2>
-                    <p class="lead text-white-50">Freshroots Impex is a premier international trading house specializing in the large-scale export of India's finest dehydrated produce.</p>
-                    <p class="text-white-50">We bridge the gap between Indian farms and global markets, exporting premium dehydrated Onion, Garlic, and Turmeric. Our advanced technology locks in natural flavor and nutritional potency, delivering products that remain shelf-stable without compromising quality.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="zoom-in">
-                <div class="about-image-stack">
-                    <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800" class="img-main shadow-glow" alt="About">
-                    <div class="experience-badge">
-                        <span class="num">100%</span>
-                        <span class="txt">Export Quality</span>
+    <section id="home" class="hero-insane">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2000');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h6 class="text-success fw-bold tracking-widest mb-3" data-aos="fade-up">ESTABLISHED IN INDIA • SERVING THE GLOBE</h6>
+                    <h1 class="hero-display">
+                        <span class="d-block text-white" data-aos="fade-up" data-aos-delay="100">ONION.</span>
+                        <span class="d-block text-outline" data-aos="fade-up" data-aos-delay="200">GARLIC.</span>
+                        <span class="d-block text-success" data-aos="fade-up" data-aos-delay="300">TURMERIC.</span>
+                    </h1>
+                    <p class="lead text-white-50 mt-4 fs-4" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="400">
+                        Premium Dehydrated Exports. <br> From Indian Soils to Global Markets.
+                    </p>
+                    <div class="mt-5" data-aos="fade-up" data-aos-delay="500">
+                        <a href="#inquiry" class="btn btn-success btn-lg rounded-pill px-5 py-3 shadow-glow">GET A QUOTE</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="about" class="about-premium py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h6 class="text-success fw-bold tracking-widest">OUR LEGACY</h6>
+                    <h2 class="display-4 fw-bold mb-4 text-white">India's Agricultural <span class="text-success">Gold</span></h2>
+                    <p class="lead text-white-50">Freshroots Impex is a premier international trading house specializing in the large-scale export of India's finest dehydrated produce.</p>
+                    <p class="text-white-50">We bridge the gap between Indian farms and global markets, exporting premium dehydrated Onion, Garlic, and Turmeric. Our advanced technology locks in natural flavor.</p>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="zoom-in">
+                    <img src="hero section bg.png" class="img-fluid rounded-4 shadow-glow" alt="About">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="onion" class="product-feature bg-dark text-white">
         <div class="container-fluid p-0">
             <div class="row g-0 align-items-center">
                 <div class="col-lg-6 order-lg-2" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=1200" class="img-full" alt="Onion">
+                    <img src="onion.png" class="img-full" alt="Onion">
                 </div>
                 <div class="col-lg-6 p-5 p-lg-5 order-lg-1" data-aos="fade-up">
                     <h2 class="display-3 fw-bold text-success">01. Dehydrated Onion</h2>
-                    <p class="fs-4 mt-4">We export white, red, and pink onions in Flakes, Kibbled, and Powder forms. Sourced for high solid content and pungent flavor profile.</p>
+                    <p class="fs-4 mt-4 opacity-75">We export white, red, and pink onions in Flakes, Kibbled, and Powder forms. Sourced for high solid content and pungent flavor profile.</p>
                 </div>
             </div>
         </div>
@@ -327,11 +312,11 @@
         <div class="container-fluid p-0">
             <div class="row g-0 align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?auto=format&fit=crop&w=1200" class="img-full" alt="Garlic">
+                    <img src="garlic.png" class="img-full" alt="Garlic">
                 </div>
                 <div class="col-lg-6 p-5 p-lg-5" data-aos="fade-up">
                     <h2 class="display-3 fw-bold">02. Dehydrated Garlic</h2>
-                    <p class="fs-4 mt-4">Available as cloves, granules, and fine powder. Retains 100% natural Allicin content for pharmaceutical and culinary use.</p>
+                    <p class="fs-4 mt-4 text-muted">Available as cloves, granules, and fine powder. Retains 100% natural Allicin content for pharmaceutical and culinary use.</p>
                 </div>
             </div>
         </div>
@@ -345,145 +330,124 @@
                 </div>
                 <div class="col-lg-6 p-5 p-lg-5 order-lg-1" data-aos="fade-right">
                     <h2 class="display-3 fw-bold text-warning">03. Golden Yellow Turmeric</h2>
-                    <p class="fs-4 mt-4">Known as 'The Golden Spice', our turmeric is high in Curcumin content. We export both Fingers and finely ground powder globally.</p>
+                    <p class="fs-4 mt-4 opacity-75">Known as 'The Golden Spice', our turmeric is high in Curcumin content. We export both Fingers and finely ground powder globally.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="certifications" class="cert-luxury-section">
-  <div class="container text-center">
-    <div class="cert-glass-card" data-aos="fade-up">
-      <h6 class="cert-subtitle">GLOBAL COMPLIANCE</h6>
-      <h2 class="cert-title">Certified for Global Excellence</h2>
-
-      <div class="row g-5 justify-content-center">
-        <!-- FSSAI -->
-        <div class="col-6 col-md-4">
-          <div class="cert-badge" data-aos="zoom-in">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.JVdnBMlSs_6REir1mSOK4wHaDk?pid=Api&P=0&h=180" alt="FSSAI">
-            <div class="cert-info">
-              <h5>FSSAI</h5>
-              <span class="cert-status verified">Verified</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- APEDA -->
-        <div class="col-6 col-md-4">
-          <div class="cert-badge" data-aos="zoom-in" data-aos-delay="100">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.meHXcmAOiPhmEDzSVV16qgHaEc?pid=Api&P=0&h=180" alt="APEDA">
-            <div class="cert-info">
-              <h5>APEDA</h5>
-              <span class="cert-status registered">Registered</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Spices Board -->
-        <div class="col-6 col-md-4">
-          <div class="cert-badge" data-aos="zoom-in" data-aos-delay="200">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.E-lX9N4qkzmn93qQULwkYQAAAA?pid=Api&P=0&h=180" alt="Spices Board">
-            <div class="cert-info">
-              <h5>Spices Board</h5>
-              <span class="cert-status certified">Certified</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="cert-note">
-        <i class="fas fa-shield-alt me-2 text-success"></i>
-       
-    </div>
-  </div>
-</section>
-
-
-   <section id="inquiry" class="inquiry-global-bg text-light" style="background-color:#0f1115;">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-xl-10">
-        <div class="luxury-inquiry-card shadow-lg rounded-4 overflow-hidden" data-aos="zoom-in" style="background-color:#1a1c20;">
-          <div class="row g-0">
-            <!-- Info Panel -->
-            <div class="col-lg-5 inquiry-info-panel text-white p-5 d-flex flex-column justify-content-center" style="background-color:#1f2126;">
-              <h2 class="display-5 fw-bold mb-4">Global <br><span class="text-success">Export Desk.</span></h2>
-              <p class="lead opacity-75">Connect with us for premium bulk export quotes.</p>
-              <div class="mt-4">
-                <p><i class="fas fa-globe-americas me-2 text-success"></i> Worldwide Shipping</p>
-                <p><i class="fas fa-shield-alt me-2 text-success"></i> Certified Quality</p>
-              </div>
-            </div>
-            <!-- Form Panel -->
-            <div class="col-lg-7 p-5 bg-dark text-white">
-              <form id="whatsappForm">
-                <div class="row g-4">
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" class="form-control stylish-input bg-secondary text-white border-0" id="n" placeholder="Name">
-                      <label for="n" class="text-white">Full Name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="email" class="form-control stylish-input bg-secondary text-white border-0" id="e" placeholder="Email">
-                      <label for="e" class="text-white">Email Address</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <select class="form-select stylish-input bg-secondary text-white border-0" id="product">
-                      <option selected disabled class="text-muted">Product Requirement</option>
-                      <option class="text-dark">Onion</option>
-                      <option class="text-dark">Garlic</option>
-                      <option class="text-dark">Turmeric</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-floating">
-                      <textarea class="form-control stylish-input bg-secondary text-white border-0" style="height:100px" id="m" placeholder="Order Details"></textarea>
-                      <label for="m" class="text-white">Order Details</label>
-                    </div>
-                  </div>
-                  <div class="col-12 text-end">
-                    <button type="submit" class="btn btn-success btn-lg px-5 rounded-pill">SEND INQUIRY</button>
-                  </div>
+    <div class="container text-center">
+        <h2 class="text-white mb-5" data-aos="fade-up">Certified for Global Excellence</h2>
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-10 col-sm-6 col-md-4" data-aos="zoom-in">
+                <div class="cert-badge">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.JVdnBMlSs_6REir1mSOK4wHaDk?pid=Api&P=0&h=180" alt="FSSAI">
+                    <div class="cert-info"><span class="cert-status verified">Verified</span></div>
                 </div>
-              </form>
-              <script>
-                document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-                  e.preventDefault();
-                  const name = document.getElementById('n').value;
-                  const email = document.getElementById('e').value;
-                  const product = document.getElementById('product').value;
-                  const message = document.getElementById('m').value;
-                  const fullMessage = `Hello, I'm ${name} (${email}). I'm interested in ${product}. Here are my order details:\n${message}`;
-                  const encodedMessage = encodeURIComponent(fullMessage);
-                  window.open(`https://wa.me/917208439472?text=${encodedMessage}`, '_blank');
-                });
-              </script>
             </div>
-          </div>
+
+            <div class="col-10 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="cert-badge">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.meHXcmAOiPhmEDzSVV16qgHaEc?pid=Api&P=0&h=180" alt="APEDA">
+                    <div class="cert-info"><span class="cert-status verified">Registered</span></div>
+                </div>
+            </div>
+
+            <div class="col-10 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="cert-badge">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.E-lX9N4qkzmn93qQULwkYQAAAA?pid=Api&P=0&h=180" alt="Spices Board">
+                    <div class="cert-info"><span class="cert-status verified">Certified</span></div>
+                </div>
+            </div>
+
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
+    <section id="inquiry" class="py-5" style="background-color:#0f1115;">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="luxury-inquiry-card shadow-lg rounded-4 overflow-hidden border border-secondary border-opacity-25" data-aos="zoom-in" style="background-color:#1a1c20;">
+                    <div class="row g-0">
+                        <div class="col-lg-5 p-5 text-white d-flex flex-column justify-content-center border-end border-secondary border-opacity-10" style="background-color:#1f2126;">
+                            <h2 class="display-5 fw-bold mb-4">Global <br><span class="text-success">Export Desk.</span></h2>
+                            <p class="lead opacity-75">Connect with us for premium bulk export quotes.</p>
+                            <div class="mt-4">
+                                <p class="mb-2"><i class="fas fa-globe-americas me-2 text-success"></i> Worldwide Shipping</p>
+                                <p class="mb-0"><i class="fas fa-shield-alt me-2 text-success"></i> Certified Quality</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-7 p-5">
+                            <form id="whatsappForm">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control stylish-input" id="n" placeholder="Name" required>
+                                            <label for="n" class="text-white-50">Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control stylish-input" id="e" placeholder="Email" required>
+                                            <label for="e" class="text-white-50">Email Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select stylish-input py-3" id="product" required>
+                                            <option value="" selected disabled>Select Product Requirement</option>
+                                            <option value="Onion">Dehydrated Onion</option>
+                                            <option value="Garlic">Dehydrated Garlic</option>
+                                            <option value="Turmeric">Golden Turmeric</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control stylish-input" style="height:120px" id="m" placeholder="Details"></textarea>
+                                            <label for="m" class="text-white-50">Order Details (Quantity, Destination, etc.)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <button type="submit" class="btn btn-success btn-lg px-5 rounded-pill shadow-glow fw-bold border-0 transition-all">
+                                            SEND INQUIRY
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <a href="https://wa.me/+917208439472" class="whatsapp-sticky" target="_blank">
         <div class="pulse"></div>
         <i class="fab fa-whatsapp me-2 fs-4"></i>
-        <span>Chat with Owner</span>
+        <span>Let's Talk</span>
     </a>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: false });
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) $('#mainNav').addClass('nav-active');
-            else $('#mainNav').removeClass('nav-active');
+        // Initialize Animations
+        AOS.init({ duration: 1000, once: true });
+
+        // WhatsApp Form Logic
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('n').value;
+            const email = document.getElementById('e').value;
+            const product = document.getElementById('product').value;
+            const message = document.getElementById('m').value;
+            const fullMessage = `Hello, I'm ${name} (${email}). I'm interested in ${product}. Details:\n${message}`;
+            window.open(`https://wa.me/917208439472?text=${encodeURIComponent(fullMessage)}`, '_blank');
         });
+        AOS.init({ duration: 1000, once: true });
     </script>
 </body>
 </html>
